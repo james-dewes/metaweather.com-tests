@@ -1,0 +1,14 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/james-dewes/metaweather.com-tests"
+  },
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "cypress": "^3.4.1"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run integrations/--my-spec.js"
+  }
+}
