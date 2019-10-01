@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 macOS 10.9 > (64-bit)
 Linux Ubuntu 12.04 >
-      Fedora 21
-      Debian 8 (64-bit)
+Fedora 21
+Debian 8 (64-bit)
 Windows 7 >
 
 NodeJs version 10>
@@ -36,4 +36,4 @@ Or to run the tests headless use
 [cypress.io](https://cypress.io)
 
 ## Authors
-** James Dewes ** [james-dewes](https://github.com/james-dewes)
+**James Dewes** [james-dewes](https://github.com/james-dewes)
