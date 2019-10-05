@@ -125,10 +125,12 @@ locations.forEach(function(locaton){
             //min_temp <= the_temp <= max_temp 
             expect(weather.the_temp).to.be.within(weather.min_temp,weather.max_temp);
             
-            //TODO: build out the following tests
             //air_pressure
+            expect(weather.air_pressure).to.be.an.number;
             //humidity
+            expect(weather.humidity).to.be.an.number;
             //visibility
+            expect(weather.visibility).to.be.an.number;
 
             //expect predictability to be within 0 (no agreement) and 100 (total agreement)
             expect(weather.predictability).to.be.within(0,100);
