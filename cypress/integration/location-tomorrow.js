@@ -79,7 +79,7 @@ let compassPoints = [
 
 locations.forEach(function(locaton){
   describe('Test metaweather.com for ' + locaton.name, function() {
-    it('Tests the API for Nottingham on ' + tomorrow.getDate('/'), function() {
+    it('Tests the API for ' + locaton.name + ' on ' + tomorrow.getDate('/'), function() {
       cy.request( '/api/location/' + locaton.woeid + '/' + tomorrow.getDate('/')).then((response) => {
 
         //expect a good response
