@@ -1,31 +1,39 @@
 /// <reference types="Cypress" />
 
-function Tomorrow(){
+/*
+ * Wrapper for JavaScript Date which can return the
+ * date as a value seperated string in the format
+ * of year, month and day.
+ * 
+ * @param days the number of days from now the user
+ *        whishes to represent. Can be negative.
+ */
 
+function OtherDate(days){
   let today = new Date();
-  let tomorrow = new Date();
+  let newDate = new Date();
 
-  tomorrow.setDate(today.getDate() + 1);
+  newDate.setDate(today.getDate() + days);
 
   let Pad = function(number){
     return ('00'+number).slice(-2);
   }
 
   this.getTimeStamp = function(){
-    return tomorrow.now;
+    return newDate.now;
   };
 
   this.getDate = function(seperator){
     return [
-        tomorrow.getFullYear(),
-        Pad(tomorrow.getMonth() + 1), //0 indexed, not 1-12
-        Pad(tomorrow.getDate())
+        newDate.getFullYear(),
+        Pad(newDate.getMonth() + 1), //0 indexed, not 1-12
+        Pad(newDate.getDate())
         ].join(seperator);
   }  
 }
 
 //set up some key variables
-let tomorrow = new Tomorrow();
+let tomorrow = new OtherDate(1);
 let locations = [{
                   name:'Nottingham',
                   woeid:'30720'
